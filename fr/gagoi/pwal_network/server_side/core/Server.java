@@ -14,11 +14,13 @@ public class Server implements Runnable {
 	
 	private Vector<Client> clients = new Vector<>();
 	
-	private int port;
+	public static final String REQUEST_CODE_CONNECTION = "0_";
+	public static final String REQUEST_CODE_GAME = "1_";
+	public static final String REQUEST_CODE_CHAT = "2_";
+	public static final String REQUEST_CODE_LOGIN = "3_";
 
 	public Server(int port) {
 		this.isOpen = true;
-		this.port = port;
 		try {
 			this.main_socket = new ServerSocket(port);
 		} catch (IOException e) {
