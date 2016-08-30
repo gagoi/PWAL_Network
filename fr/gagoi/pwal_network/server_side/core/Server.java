@@ -41,5 +41,9 @@ public class Server implements Runnable {
 		}
 		
 	}
+	
+	public static void main(String[] args){
+		new Thread(new Server(475)).start();
+	}
 
 }

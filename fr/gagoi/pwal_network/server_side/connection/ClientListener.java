@@ -13,7 +13,7 @@ public class ClientListener implements Runnable{
 	
 	private boolean listening;
 	private DatagramSocket socket;
-	private DatagramPacket packet = new DatagramPacket(new byte[54], MAX_PACKET_SIZE);
+	private DatagramPacket packet = new DatagramPacket(new byte[MAX_PACKET_SIZE], MAX_PACKET_SIZE);
 	
 	public ClientListener(InetAddress address, int port) {
 		listening = true;
